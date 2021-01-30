@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <title>Immigration Processing Services</title>
@@ -35,18 +37,21 @@
                             <div class="logo">
                                 <img src="images/IPS Logo.png" alt="Immigration Processing Services Logo">
                             </div>
-                            <div class="desktop__nav--menu">
-                                <ul>
-                                    <li class="mobile__menu--item" ><a href="">Home</a></li>
-                                    <li class="mobile__menu--item" ><a href="">Services</a></li>
-                                    <li class="mobile__menu--item" ><a href="">About</a></li>
-                                    <li class="mobile__menu--item" ><a href="">Contact</a></li>
-                                </ul>
-        
-                                <div class="mobile__social">
-                                    <i class="fab fa-instagram"></i>
-                                    <i class="fab fa-facebook-f"></i>
-                                    <i class="far fa-envelope"></i>
+                            <div class="mobile__nav--menu">
+                                <div class="center">
+                                    <ul>
+                                        <li class="mobile__menu--item" ><a href="">Home</a></li>
+                                        <li class="mobile__menu--item" ><a href="">Services</a></li>
+                                        <li class="mobile__menu--item" ><a href="">About</a></li>
+                                        <li class="mobile__menu--item" ><a href="">Contact</a></li>
+                                    </ul>
+            
+                                    <div class="mobile__social">
+                                        <i class="fab fa-instagram"></i>
+                                        <i class="fab fa-facebook-f"></i>
+                                        <i class="far fa-envelope"></i>
+                                    </div>
+
                                 </div>
                             </div>
         
@@ -61,13 +66,16 @@
                         <div class="hero__text">
                             <h1>IMMIGRATION CONSULTING <span>SPECIALIST</span></h1>
                             <p>For more than 15 years our priority has always been your legal security</p>
-                            <a class="btn__blue" href="">Contact</a>
+                            <a class="btn__blue btn__overlay" href="">Contact</a>
                         </div>
     
                         <div class="hero__social">
-                            <i class="fab fa-instagram"></i>
-                            <i class="fab fa-facebook-f"></i>
-                            <i class="far fa-envelope"></i>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="far fa-envelope"></i></a>
+                            
+                            
+                            
                         </div>
 
                     </div>
@@ -93,18 +101,18 @@
             </section>
 
             <section class="services" id="services" >
-                <div class="container">
-                    <div class="overlay">
+                <div class="overlay">
+                    <div class="container">
                         <h2>Our Services</h2>
                         <div class="services__grid">
                             <div class="service">
-                                <h3>Immigration Consultation</h3>
+                                <h3>Immigration <br> Consultation</h3>
                                 <p>Business disputes are part of every business. 
                                     We help you protect your best interests.</p>
                             </div>
     
                             <div class="service">
-                                <h3>Translation & Interpretation</h3>
+                                <h3>Translation & <br> Interpretation</h3>
                                 <p>We provide employers with practical and 
                                     strategic advice and guidance.</p>
                             </div>
@@ -116,14 +124,14 @@
                             </div>
     
                             <div class="service">
-                                <h3>Business Tax Services</h3>
+                                <h3>Business Tax <br> Services</h3>
                                 <p>We help create business entities, such as 
                                     corporations, partnerships and joint ventures.</p>
                             </div>
     
                         </div>
                         
-                        <a class="btn__blue" href="">Read More</a>
+                        <a class="btn__blue btn__overlay" href="">Read More</a>
     
                     </div>
 
@@ -187,13 +195,15 @@
                     <form action="">
                         <div class="contact__grid">
     
-                            <input type="text" class="name">
-                            <input type="text" class="lastname">
-                            <input type="text" class="email">
-                            <input type="text" class="phone">
+                            <input type="text" class="name" placeholder="Name">
+                            <input type="text" class="lastname" placeholder="Last Name">
+                            <input type="text" class="email" placeholder="Email">
+                            <input type="text" class="phone" placeholder="Phone Number">
     
-                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                            <textarea placeholder="Message" name="message" id="message" cols="30" rows="10"></textarea>
                         </div>
+
+                        <button type="submit" class="btn__blue" >SEND</button>
                     </form>     
 
                 </div>
@@ -232,9 +242,9 @@
                 </div>
 
                 <div class="footer__social">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="far fa-envelope"></i>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="far fa-envelope"></i></a>
                 </div>
             </div>
         </footer>
