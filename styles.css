@@ -124,15 +124,15 @@ i:hover{
     transition: all 1s ease;
 }
 
-.desktop__menu--item:hover a{
+.hover__blue:hover a{
     color: var(--blue);
-    transform: scale(1.1);
-    font-weight: 500;
+    /* transform: scale(1.1);
+    font-weight: 500; */
 }
 
-.desktop__menu--item:hover{
-    transform: scale(1.1);
-}
+
+
+
 
 .mobile__social i{
     font-size: clamp(1.5rem, 2vw, 2rem);
@@ -192,6 +192,10 @@ i:hover{
     margin: var(--marginSection) 0;
 }
 
+.services__grid a{
+    font-size: inherit;
+}
+
 .service{
     padding: 5em .5em;
     border: solid 2px var(--blue);
@@ -244,7 +248,8 @@ i:hover{
 }
 
 form{
-    margin: 3em 0;
+    margin: 3em auto;
+    width: clamp(300px, 55vw, 800px);
 }
 
 input,
@@ -270,6 +275,8 @@ textarea::placeholder{
 
 button{
     border: none;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    cursor: pointer;
 }
 
 footer{
@@ -334,7 +341,7 @@ footer .logo{
 /* Contact page styles start */
 
 .page__nav{
-    padding: 5em 0;
+    padding: 2em 0;
 }
 
 .page__nav .desktop__menu--item a{
@@ -342,7 +349,7 @@ footer .logo{
 }
 .contact__main{
     text-align: center;
-    padding: 5em 0;
+    padding-top: 4em;
 }
 
 .address__grid{ 
@@ -390,6 +397,10 @@ footer .logo{
     margin: 0 auto;
 }
 
+.contact__social i:hover{
+    color: var(--blue)
+}
+
 .contact__social i{
     font-size: clamp(30px, 15vw, 3rem);
    
@@ -398,6 +409,23 @@ footer .logo{
 
 
 /* Contact page styles end */
+
+
+/* service page style start */
+
+.services__main{
+    margin-top: 6em;
+}
+
+.services__header{
+    background-image: url('images/group-of-people-working-out-business-plan-in-an-office-min.jpg');
+}
+
+.service__header{
+    color: var(--black);
+}
+
+/* service page style end */
 
 @media screen and (max-width: 900px){
 
@@ -462,6 +490,10 @@ footer .logo{
         color: white;
         font-weight: 300;
     }
+
+    .mobile__menu--item:nth-child(2){
+        overflow: hidden;
+    }
     
     .mobile__menu--item + .mobile__menu--item{
         margin-top: 2em;
@@ -473,6 +505,42 @@ footer .logo{
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .mobile__dropdown{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        max-height: 0;
+        transition: 1s ease-in-out;
+    }
+
+    .mobile__menu--item p{
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        margin-top: 0;
+        cursor: pointer;
+    }
+
+    .mobile__menu--item:hover i{
+        color: var(--blue);
+    }
+
+    .rotate__arrow{
+        transform: rotate(180deg);
+        transition: .5s ease;
+    }
+
+    .show__dropdown--mobile{
+        max-height: 500px;
+    }
+
+    .dropdown__item--mobile{
+        margin-top: 1em;
+        
+    }
+
+    .mobile__dropdown a{
+        color: var(--blue);
     }
     
 
@@ -514,6 +582,73 @@ footer .logo{
         color: white;
         font-weight: 200;
         font-size: clamp(.8rem, 1.5vw, 1.5rem);
+    }
+
+    .desktop__menu--item{
+        position: relative;
+    }
+
+    .services__dropdown{
+        position: absolute;
+        left: 0;
+        top: 120%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+        padding: 0 1em 0 1em;
+        background-color: white;
+        max-height: 0;
+        transition: all 1s ease;
+        /* opacity: 0; */
+        padding-bottom: 0;
+        overflow: hidden;
+    }
+
+    .services__dropdown a{
+        color: var(--black)
+    }
+
+    
+
+    .dropdown__item + .dropdown__item{
+        margin-top: 1em;
+    }
+
+    .dropdown__item {
+        color: var(--black);
+        padding-bottom: 1em;
+        border-bottom: solid 1px var(--blue);
+        position: relative;
+        transition: 3s ease;
+    }
+
+    .dropdown i{
+        margin-left: .5em;
+        transition: .5s ease;
+        
+    }
+
+    .dropdown:hover i{
+        transform: rotate(180deg);
+        color: var(--blue);
+    }
+
+    .dropdown__item:hover{
+        font-weight: 500;
+    }
+
+    .desktop__menu--item.dropdown:hover .services__dropdown{
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    .services__dropdown a:first-child{
+        padding-top: 1em;
+    }
+
+    .services__dropdown a:last-child{
+        border: none;
     }
 
     .hero .container{
