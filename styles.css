@@ -10,7 +10,7 @@
     --overlay: rgba(39, 37, 38, 0.85);
     --marginSection: 12em;
     --btnShadow:  drop-shadow(0px 4px 35px rgba(0, 122, 168, 0.53));
-    --btnShadowBlack: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.36));
+    --btnShadowBlack: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.46));
 }
 
 img{
@@ -91,7 +91,7 @@ a{
     color:  white;
 }
 
-header{
+.header__home{
     
     background-image: url('images/O6YV3J0-min.jpg');
     background-size: cover;
@@ -107,6 +107,31 @@ nav .logo{
 
 i{
     color: var(--blue);
+    transition: all .5s ease;
+    
+}
+
+i:hover{
+    color: white;
+    transform: scale(1.15);
+}
+
+.desktop__menu--item a{
+    transition: all .2s ease;
+}
+
+.desktop__menu--item{
+    transition: all 1s ease;
+}
+
+.desktop__menu--item:hover a{
+    color: var(--blue);
+    transform: scale(1.1);
+    font-weight: 500;
+}
+
+.desktop__menu--item:hover{
+    transform: scale(1.1);
 }
 
 .mobile__social i{
@@ -132,6 +157,13 @@ i{
     background-color: var(--blue);
     color: white;
     filter: var(--btnShadow);
+    transition: all 1s ease;
+    border: solid 2px var(--blue);
+}
+
+.btn__blue:hover{
+    background-color: transparent;
+    color: var(--blue);
 }
 
 .btn__overlay{
@@ -165,6 +197,13 @@ i{
     border: solid 2px var(--blue);
     /* width: clamp(200px, 20vw, 300px) */
     width: clamp(270px, 20vw, 286px);
+    transition: all 1s ease;
+}
+
+.service:hover{
+    transform: translateY(-10px);
+    background: var(--blue);
+    filter: var(--btnShadowBlack);
 }
 
 
@@ -220,10 +259,14 @@ textarea::placeholder{
     font-family: 'Lato', sans-serif;
 }
 
+
 .contact__grid{
     display: grid;
     gap: 2em;
 }
+
+
+
 
 button{
     border: none;
@@ -231,7 +274,7 @@ button{
 
 footer{
     background-color: var(--black);
-    padding: 6em 0;
+    padding: 6em 0 3em 0;
     text-align: center;
 }
 
@@ -269,11 +312,17 @@ footer .logo{
     justify-content: space-between;
     align-items: center;
     width: clamp(150px, 50vw, 250px);
-    margin: 3em auto;
+    margin: 4em auto;
 }
 
 .footer__menu--item + .footer__menu--item{
     margin-top: 1em;
+}
+
+.attribution a{
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    color: var(--blue);
+    font-weight: 600;
 }
 
 .mobile__nav--menu.show__menu{
@@ -282,7 +331,73 @@ footer .logo{
 }
 
 
+/* Contact page styles start */
 
+.page__nav{
+    padding: 5em 0;
+}
+
+.page__nav .desktop__menu--item a{
+    color: var(--black);
+}
+.contact__main{
+    text-align: center;
+    padding: 5em 0;
+}
+
+.address__grid{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 2em;
+
+}
+
+#map{
+    width: clamp(250px, 30vw, 500px);
+    height: clamp(250px, 30vw, 500px);
+    margin: 0 auto;
+}
+
+.height__auto{
+    height: auto;
+}
+
+.page__header{
+    text-align: center;
+    background-image: url('images/global-business-min.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page__header h1{
+    color: var(--blue);
+}
+
+.contact__info--grid{
+    margin: var(--marginSection) 0;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.contact__social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: clamp(100px, 40vw, 500px);
+    margin: 0 auto;
+}
+
+.contact__social i{
+    font-size: clamp(30px, 15vw, 3rem);
+   
+}
+
+
+
+/* Contact page styles end */
 
 @media screen and (max-width: 900px){
 
@@ -417,10 +532,63 @@ footer .logo{
     .hero__social{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         height: clamp(90px, 30vh, 200px);
     }
+}
+
+@media screen and (min-width: 750px){
+    .contact__grid{
+        
+        grid-template-areas: 'nombre apellido'
+                             'telefono email'
+                             'mensaje mensaje';
+    }
+    
+    .name{
+        grid-area: "nombre";
+         
+    }
+    
+    .lastname{
+        grid-area: "apellido";
+    }
+    
+    .email{
+        grid-area: "email";
+    }
+    
+    .phone{
+        grid-area: "telefono";
+    }
+    
+    textarea{
+        grid-area: "mensaje";
+        grid-column: span 2;
+    }
+
+    /* .contact__info--grid{
+        grid-template-areas: 'phone fax email'
+                             ' . social .'  ;
+    }
+
+    .contact__phone{
+        grid-area: phone;
+    }
+
+    .contact__fax{
+        grid-area: fax;
+    }
+
+    .contact__email{
+        grid-area: email;
+    }
+
+    .contact__social{
+        grid-area: social;
+        margin-top: 5em;
+    } */
 }
 
 
