@@ -61,6 +61,7 @@ p{
     font-weight: 300;
     margin-top: 1em;
     font-size:   clamp(1.5rem, 2vw, 1.8rem);
+   
 }
 
 a{
@@ -97,6 +98,7 @@ a{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     
 }
 
@@ -181,6 +183,7 @@ i:hover{
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    background-attachment: fixed;
 }
 
 .services__grid{
@@ -200,7 +203,7 @@ i:hover{
     padding: 5em .5em;
     border: solid 2px var(--blue);
     /* width: clamp(200px, 20vw, 300px) */
-    width: clamp(270px, 20vw, 286px);
+    width: clamp(270px, 20vw, 280px);
     transition: all 1s ease;
 }
 
@@ -217,6 +220,7 @@ i:hover{
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
+    background-attachment: fixed;
 }
 
 .info__grid{
@@ -519,6 +523,7 @@ footer .logo{
         font-size: clamp(1rem, 2vw, 1.5rem);
         margin-top: 0;
         cursor: pointer;
+        color: white;
     }
 
     .mobile__menu--item:hover i{
