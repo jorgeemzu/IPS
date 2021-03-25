@@ -596,6 +596,7 @@ footer .logo {
     /* opacity: 0; */
     padding-bottom: 0;
     overflow: hidden;
+    z-index: 1000;
   }
 
   .services__dropdown a {
@@ -628,7 +629,8 @@ footer .logo {
     font-weight: 500;
   }
 
-  .desktop__menu--item.dropdown:hover .services__dropdown {
+  .desktop__menu--item.dropdown:hover .services__dropdown,
+  .services__dropdown:hover {
     max-height: 500px;
     opacity: 1;
   }
