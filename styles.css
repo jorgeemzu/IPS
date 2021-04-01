@@ -10,9 +10,13 @@
   --blue: #00adef;
   --black: #272526;
   --overlay: rgba(39, 37, 38, 0.85);
-  --marginSection: 12em;
-  --btnShadow: drop-shadow(0px 4px 35px rgba(0, 122, 168, 0.53));
-  --btnShadowBlack: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.46));
+  --marginSection: 6em;
+  /* --btnShadow: drop-shadow(0px 4px 35px rgba(0, 122, 168, 0.53));
+  --btnShadowBlack: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.46)); */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 img {
@@ -65,7 +69,7 @@ span {
 p {
   font-weight: 300;
   margin-top: 1em;
-  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  font-size: clamp(1.5rem, 2vw, 1.6rem);
 }
 
 a {
@@ -100,7 +104,6 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 nav .logo {
@@ -146,7 +149,7 @@ i:hover {
 
 .btn__blue {
   display: inline-block;
-  margin: 2em 0;
+  margin-top: 3em;
   padding: 0.6em 1.5em;
   background-color: var(--blue);
   color: white;
@@ -191,18 +194,26 @@ i:hover {
   font-size: inherit;
 }
 
-.service {
-  padding: 5em 0.5em;
-  border: solid 2px var(--blue);
+.services h3 {
+  color: white;
+  /* padding: 5em 0.5em; */
+  /* border: solid 2px var(--blue); */
   /* width: clamp(200px, 20vw, 300px) */
-  width: clamp(270px, 20vw, 280px);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 400;
   transition: all 1s ease;
+  cursor: pointer;
 }
 
-.service:hover {
+.services h3:hover {
   transform: translateY(-10px);
-  background: var(--blue);
+
+  color: var(--blue);
   filter: var(--btnShadowBlack);
+}
+
+.services .btn__blue {
+  margin: 0;
 }
 
 .info {
@@ -211,7 +222,6 @@ i:hover {
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  background-attachment: fixed;
 }
 
 .info__grid {
@@ -506,13 +516,17 @@ footer .logo {
     align-items: center;
   }
 
-  .mobile__dropdown {
+  .mobile__menu--item p {
+    display: none;
+  }
+
+  /* .mobile__dropdown {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     max-height: 0;
     transition: 1s ease-in-out;
-  }
+  } */
 
   .mobile__menu--item p {
     font-size: clamp(1rem, 2vw, 1.5rem);

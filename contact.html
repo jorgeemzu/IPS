@@ -52,8 +52,8 @@
                     <a href="index.html">Home</a>
                   </li>
                   <li class="desktop__menu--item dropdown">
-                    <a href="">Services <i class="fas fa-chevron-down"></i></a>
-                    <div class="services__dropdown">
+                    <a href="index.html#services">Services</i></a>
+                    <!-- <div class="services__dropdown">
                       <a
                         class="dropdown__item"
                         href="immigrationConsultation.html"
@@ -70,7 +70,7 @@
                       <a class="dropdown__item" href=""
                         >Business Tax Services</a
                       >
-                    </div>
+                    </div> -->
                   </li>
                   <li class="desktop__menu--item">
                     <a href="about.html">About</a>
@@ -96,9 +96,10 @@
                       <a href="index.html">Home</a>
                     </li>
                     <li class="mobile__menu--item">
-                      <p>Services <i class="fas fa-chevron-down"></i></p>
+                      <a href="index.html#services">Services</a>
+                      <p>Services</p>
                       <div class="mobile__dropdown">
-                        <a
+                        <!-- <a
                           class="dropdown__item--mobile"
                           href="immigrationConsultation.html"
                           >Immigration Consultation</a
@@ -113,9 +114,11 @@
                           href="creditrepair.html"
                           >Credit Repair & Consultation</a
                         >
-                        <a class="dropdown__item--mobile" href=""
+                        <a
+                          class="dropdown__item--mobile"
+                          href="businesstax.html"
                           >Business Tax Services</a
-                        >
+                        > -->
                       </div>
                     </li>
                     <li class="mobile__menu--item">
@@ -213,8 +216,8 @@
               You’ll find all that and more at Immigration Processing Services.
             </p>
 
-            <form action="">
-              <div class="contact__grid fader">
+            <form action="" name="contact" method="POST" data-netlify="true">
+              <div class="contact__grid">
                 <input type="text" class="name" placeholder="Name" />
                 <input type="text" class="lastname" placeholder="Last Name" />
                 <input type="text" class="email" placeholder="Email" />
@@ -229,7 +232,7 @@
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn__blue">SEND</button>
+              <button type="submit" class="btn__blue fader">SEND</button>
             </form>
           </div>
         </section>

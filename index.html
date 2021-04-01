@@ -41,7 +41,10 @@
                     <li class="desktop__menu--item hover__blue">
                       <a href="">Home</a>
                     </li>
-                    <li class="desktop__menu--item dropdown">
+                    <li class="desktop__menu--item hover__blue">
+                      <a href="#services">Services</a>
+                    </li>
+                    <!-- <li class="desktop__menu--item dropdown">
                       <a href=""
                         >Services <i class="fas fa-chevron-down"></i
                       ></a>
@@ -63,7 +66,7 @@
                           >Business Tax Services</a
                         >
                       </div>
-                    </li>
+                    </li> -->
                     <li class="desktop__menu--item hover__blue">
                       <a href="about.html">About</a>
                     </li>
@@ -88,9 +91,10 @@
                         <a href="index.html">Home</a>
                       </li>
                       <li class="mobile__menu--item">
-                        <p>Services <i class="fas fa-chevron-down"></i></p>
+                        <a href="#services">Services</a>
+                        <p>Services</p>
                         <div class="mobile__dropdown">
-                          <a
+                          <!-- <a
                             class="dropdown__item--mobile"
                             href="immigrationConsultation.html"
                             >Immigration Consultation</a
@@ -109,7 +113,7 @@
                             class="dropdown__item--mobile"
                             href="businesstax.html"
                             >Business Tax Services</a
-                          >
+                          > -->
                         </div>
                       </li>
                       <li class="mobile__menu--item">
@@ -203,9 +207,46 @@
         <section class="services" id="services">
           <div class="overlay">
             <div class="container">
-              <h2 class="fader">Our Services</h2>
+              <h2 class="fader blue">Our Services</h2>
               <div class="services__grid fader">
-                <a href="immigrationConsultation.html">
+                <a href="contact.html"
+                  ><h3 class="service">Personalized License Plates</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Vehicle Title Bonds</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Vehicle Transfers</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Duplicate Titles</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Drivers License</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Immigration Processing</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Notary Public</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Car Insurance</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Dealer Licenses</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Registration Renewal</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Vehicle Inspections</h3></a
+                >
+                <a href="contact.html"
+                  ><h3 class="service">Vehicle Registration Stikers</h3></a
+                >
+                <a href="contact.html"><h3 class="service">Translations</h3></a>
+                <!-- <a href="immigrationConsultation.html">
                   <div class="service">
                     <h3>
                       Immigration <br />
@@ -252,10 +293,10 @@
                       partnerships and joint ventures.
                     </p>
                   </div>
-                </a>
+                </a> -->
               </div>
 
-              <a class="btn__blue btn__overlay fader" href="">Read More</a>
+              <a class="btn__blue btn__overlay fader" href="">About Us</a>
             </div>
           </div>
         </section>
@@ -310,7 +351,7 @@
               You’ll find all that and more at Immigration Processing Services.
             </p>
 
-            <form action="">
+            <form action="" name="contact" method="POST" data-netlify="true">
               <div class="contact__grid">
                 <input type="text" class="name" placeholder="Name" />
                 <input type="text" class="lastname" placeholder="Last Name" />
